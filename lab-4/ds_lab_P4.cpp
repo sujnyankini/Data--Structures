@@ -19,16 +19,6 @@ void push()
     newnode->next=head;
     head=newnode;
     pf("\n---The element %d has been inserted at beg---",newnode->data);
-    /*display*/  
-	pf("\nThe linked list you have created is: \n");
-    temp=head;
-    while(temp!=NULL)
-    {
-
-        pf("%d\t",temp->data);
-        temp=temp->next;
-    }
-    
 
 }
 void append()
@@ -44,20 +34,7 @@ void append()
 
     }
     temp->next=newnode;
-    pf("\nThe element %d has been inserted at the end:",newnode->data);
-	
-	/*display*/
-    
-    pf("The linked list you have created is: \n");
-    temp=head;
-    while(temp!=NULL)
-    {
-
-        pf("%d\t",temp->data);
-        temp=temp->next;
-    }
-
-
+    pf("\nThe element %d has been inserted at the end:",newnode->data)
 }
 
 void insert_pos()
@@ -77,16 +54,6 @@ void insert_pos()
     }
    	last->next=newnode;
     newnode->next=temp;
-    
-        pf("The linked list you have created is: \n");
-    temp=head;
-    while(temp!=NULL)
-    {
-
-        pf("%d\t",temp->data);
-        temp=temp->next;
-    }
-    
     
 
 }
@@ -113,11 +80,14 @@ int main()
    switch(ch){
    case 1:
             push();
+	   display();
             break;
     case 2: append();
+	    display();
             break;
     case 3:
     		insert_pos();
+	    display();
 
             break;
     case 4:
